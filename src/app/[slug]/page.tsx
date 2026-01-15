@@ -3,8 +3,8 @@ import EditPage from "@/components/EditPageBar";
 import {MDXContent} from "@/components/mdx-content";
 import {DocsToc} from "@/components/toc";
 import {docs} from "../../../.velite";
-import NotFound from "next/dist/client/components/builtin/not-found";
 import {getHeadings} from "@/libs/docs/utils";
+import {notFound} from "next/navigation";
 
 interface Params {
     params: {
@@ -18,7 +18,7 @@ export default async function DocsPage({params}: Params) {
 
 
     if (!doc) {
-        return NotFound;
+        notFound();
     }
 
     const headings = getHeadings(doc.raw);

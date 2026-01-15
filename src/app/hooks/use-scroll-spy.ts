@@ -1,9 +1,8 @@
-/* eslint-disable no-undef */
 import * as React from "react";
 
 export function useScrollSpy(selectors: string[], options?: IntersectionObserverInit) {
-  const [activeId, setActiveId] = React.useState<string | null>();
-  const observer = React.useRef<IntersectionObserver>();
+  const [activeId, setActiveId] = React.useState<string | null>(null);
+  const observer = React.useRef<IntersectionObserver | null>(null);
 
   React.useEffect(() => {
     const elements = selectors.map((selector) => document.querySelector(selector));

@@ -1,0 +1,38 @@
+{
+  "name": "docs",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"velite dev\" \"next dev --turbopack\"",
+    "build": "pnpm velite && next build",
+    "build:content": "pnpm velite"
+  },
+  "dependencies": {
+    "@heroui/react": "3.0.0-beta.3",
+    "@heroui/styles": "3.0.0-beta.3",
+    "concurrently": "^9.2.1",
+    "framer-motion": "^12.25.0",
+    "github-slugger": "2.0.0",
+    "hamburger-react": "^2.5.2",
+    "lucide-react": "0.562.0",
+    "marked": "17.0.1",
+    "mdx": "^0.3.1",
+    "mitt": "3.0.1",
+    "next": "16.1.1",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "scroll-into-view-if-needed": "^3.1.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "babel-plugin-react-compiler": "1.0.0",
+    "eslint": "^9",
+    "eslint-config-next": "16.1.1",
+    "tailwindcss": "^4",
+    "typescript": "^5",
+    "velite": "^0.3.1"
+  }
+}
